@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Fútbol Paraguayo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0038A8; /* Azul Paraguay */
+            --secondary-color: #D52B1E; /* Rojo Paraguay */
+            --accent-color: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 56, 168, 0.8), rgba(213, 43, 30, 0.8)), 
+                        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        
+        .index-card {
+            background-color: white;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .index-card .list-group-item {
+            border: none;
+            padding: 10px 15px;
+        }
+        
+        .index-card .list-group-item:hover {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+        
+        .index-card .list-group-item.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .division-card {
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-globe-americas me-2"></i>Fútbol Paraguayo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#origenes">Orígenes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#globalizacion">Globalización</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paraguayo">Fútbol PY</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Historia del Fútbol Paraguayo</h1>
+            <p class="lead">Desde sus humildes comienzos hasta convertirse en pasión nacional</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="row">
+            <!-- Índice -->
+            <div class="col-lg-3 mb-4">
+                <div class="card index-card">
+                    <div class="card-header bg-white text-dark border-bottom">
+                        <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i>Índice</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#origenes" class="list-group-item list-group-item-action">1. Orígenes del Fútbol Mundial</a>
+                        <a href="#globalizacion" class="list-group-item list-group-item-action">2. Evolución y Globalización</a>
+                        <a href="#paraguayo" class="list-group-item list-group-item-action">3. Historia del Fútbol Paraguayo</a>
+                        <a href="#primera" class="list-group-item list-group-item-action ms-3">3.1 Primera División</a>
+                        <a href="#intermedia" class="list-group-item list-group-item-action ms-3">3.2 División Intermedia</a>
+                        <a href="#primera-b" class="list-group-item list-group-item-action ms-3">3.3 Primera División B</a>
+                        <a href="#primera-c" class="list-group-item list-group-item-action ms-3">3.4 Primera División C</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="col-lg-9">
+                <!-- Sección 1 -->
+                <section id="origenes" class="mb-5">
+                    <h2 class="section-title">1. Orígenes del Fútbol Mundial</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">El fútbol, tal como lo conocemos hoy, tiene sus raíces en diversos juegos de pelota practicados en varias culturas antiguas, como la china (cuju), la japonesa (kemari), y juegos mesoamericanos. Sin embargo, fue en Inglaterra, durante el siglo XIX, donde se consolidaron las primeras reglas oficiales.</p>
+                            <p class="card-text">En 1863 se fundó la Football Association (FA), marcando el inicio del fútbol moderno.</p>
+                            <div class="text-center mt-3">
+                                <img src="https://images.unsplash.com/photo-1577032229840-33197764440d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fútbol antiguo" class="img-fluid rounded" style="max-height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 2 -->
+                <section id="globalizacion" class="mb-5">
+                    <h2 class="section-title">2. Evolución y Globalización del Fútbol</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Con el tiempo, el fútbol se expandió rápidamente por Europa, Sudamérica, África y Asia. La FIFA se fundó en 1904, y el primer Mundial de Fútbol se jugó en 1930 en Uruguay.</p>
+                            <p class="card-text">Desde entonces, se ha convertido en el deporte más popular del mundo, con miles de clubes y millones de aficionados. Las competiciones como la UEFA Champions League, la Copa Libertadores, y los Juegos Olímpicos también han sido claves en su expansión global.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Estadio de fútbol" class="img-fluid rounded mb-2">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Aficionados" class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección 3 -->
+                <section id="paraguayo" class="mb-5">
+                    <h2 class="section-title">3. Historia del Fútbol Paraguayo</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">El fútbol llegó a Paraguay a finales del siglo XIX. El primer club fundado fue el Club Olimpia en 1902. La Asociación Paraguaya de Fútbol se fundó en 1906, y el primer campeonato oficial se jugó en 1906.</p>
+                            <p class="card-text">Desde entonces, el fútbol ha crecido notablemente en el país, siendo el deporte más popular y una gran fuente de identidad nacional.</p>
+                            <div class="text-center mt-3">
+                                <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fútbol paraguayo" class="img-fluid rounded" style="max-height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Subsecciones -->
+                <div class="row">
+                    <!-- Primera División -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 division-card" id="primera">
+                            <div class="card-header">
+                                <h5 class="mb-0">3.1 Primera División</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">La Primera División de Paraguay, también conocida como División de Honor, es la máxima categoría del fútbol paraguayo. Ha sido dominada históricamente por clubes como Olimpia, Cerro Porteño, Libertad y Guaraní.</p>
+                                <p class="card-text">El campeonato se disputa en dos torneos: Apertura y Clausura. Olimpia es el club más laureado del país.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- División Intermedia -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 division-card" id="intermedia">
+                            <div class="card-header">
+                                <h5 class="mb-0">3.2 División Intermedia</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">La División Intermedia es la segunda categoría del fútbol paraguayo. Se caracteriza por ser muy competitiva, con clubes históricos y emergentes que luchan por ascender a la Primera División.</p>
+                                <p class="card-text">Los dos mejores equipos al final del torneo ascienden, mientras que los dos últimos descienden.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primera División B -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 division-card" id="primera-b">
+                            <div class="card-header">
+                                <h5 class="mb-0">3.3 Primera División B</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">La Primera División B es la tercera categoría y agrupa a equipos principalmente del Gran Asunción. Es una división clave para el desarrollo de jóvenes talentos y equipos tradicionales.</p>
+                                <p class="card-text">El campeón asciende a la División Intermedia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primera División C -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 division-card" id="primera-c">
+                            <div class="card-header">
+                                <h5 class="mb-0">3.4 Primera División C</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">La Primera División C es la cuarta y última categoría del fútbol paraguayo. Participan equipos con menor infraestructura, pero con gran pasión y compromiso.</p>
+                                <p class="card-text">Es una liga formativa que permite soñar con el ascenso y la profesionalización.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Historia del Fútbol Paraguayo</h5>
+                    <p>Un recorrido por la evolución del deporte rey en Paraguay</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.apf.org.py/" class="text-white" target="_blank">APF - Asociación Paraguaya de Fútbol</a></li>
+                        <li><a href="https://www.conmebol.com/" class="text-white" target="_blank">CONMEBOL</a></li>
+                        <li><a href="https://www.fifa.com/" class="text-white" target="_blank">FIFA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p>&copy; 2023 Historia del Fútbol Paraguayo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón para volver arriba -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mostrar/ocultar botón de volver arriba
+        window.addEventListener('scroll', function() {
+            var backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scrolling para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
